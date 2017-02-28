@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/darker_gray">
@@ -11,6 +12,7 @@
         android:layout_margin="5dp"
         android:background="@android:color/white"
         android:orientation="vertical">
+
 
         <android.support.design.widget.TabLayout
             android:id="@+id/AddBikeDeliveryTabButton"
@@ -24,13 +26,14 @@
             android:id="@+id/linear_add_bike_delivery"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="vertical"
             android:padding="10dp"
-            android:orientation="vertical">
+            android:weightSum="5">
 
             <android.support.v4.view.ViewPager
                 android:id="@+id/viewPagerAddDelivery"
                 android:layout_width="match_parent"
-                android:layout_height="180dp" />
+                android:layout_height="160dp" />
 
             <CheckBox
                 android:id="@+id/check_photo"
@@ -41,6 +44,8 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
                 android:background="@android:color/white"
                 android:text="Favorites:"
                 android:textSize="18sp"
@@ -48,22 +53,25 @@
 
             <android.support.v7.widget.RecyclerView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:background="@android:color/white" />
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                tools:listitem="@android:layout/simple_list_item_checked" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/button_transparent_selector"
+                android:src="@drawable/ic_star_black_48dp"
+                android:text="Add to Favorites"
+                android:textColor="@color/colorPrimaryDark" />
 
             <ImageView
                 android:id="@+id/divider"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginBottom="7dp"
                 android:background="@color/colorPrimaryDark" />
-
-            <ImageButton
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/ic_star_black_48dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -78,8 +86,9 @@
                     android:layout_marginRight="5dp"
                     android:layout_marginStart="6dp"
                     android:layout_weight="1"
-                    android:background="@android:color/holo_red_dark"
-                    android:text="CANCEL" />
+                    android:background="@drawable/button_selector_red"
+                    android:text="CANCEL"
+                    android:textColor="@color/colorLightPrimary" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -87,8 +96,9 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
                     android:layout_weight="1"
-                    android:background="@color/colorPrimary"
-                    android:text="PICKUP" />
+                    android:background="@drawable/button_selector_orange"
+                    android:text="PICKUP"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 
@@ -96,4 +106,4 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</ScrollView>
