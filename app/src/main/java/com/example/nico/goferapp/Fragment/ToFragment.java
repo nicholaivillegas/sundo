@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.example.nico.goferapp.R;
 
@@ -55,5 +56,17 @@ public class ToFragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+    }
+
+    public TextView NameTo() {
+        return editTextPersonNameTo;
+    }
+
+    public TextView AddressTo() {
+        return editTextAddressTo;
+    }
+
+    public TextView NumberTo() {
+        return editTextNumberTo;
     }
 }

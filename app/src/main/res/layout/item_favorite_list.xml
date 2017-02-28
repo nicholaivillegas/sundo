@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="#eee"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/bikefaveName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical"
+        android:text="Sample Fave Name"
+        android:textColor="#555"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/bikefavDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        android:background="@drawable/button_transparent_selector"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:src="@drawable/ic_delete_black_18dp"
+        android:tint="#555" />
+
+</LinearLayout>
