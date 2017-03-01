@@ -152,6 +152,7 @@ public class AddBikeDeliveryActivity extends AppCompatActivity {
                 }
                 break;
             case R.id.button_cancel_add:
+                finish();
                 break;
             case R.id.button_pickup:
                 break;
@@ -159,7 +160,7 @@ public class AddBikeDeliveryActivity extends AppCompatActivity {
     }
 
     private void populateFavoritesList() {
-        final List<BikeDeliveryFavModel> bikeDeliveryFavs = bikeDeliveryFavModel.getFavorites();
+        final List<BikeDeliveryFavModel> bikeDeliveryFavs = BikeDeliveryFavModel.getFavorites();
         bikeDeliveryFavListAdapter = new BikeDeliveryFavListAdapter(this, bikeDeliveryFavs);
         listview.setAdapter(bikeDeliveryFavListAdapter);
         bikeDeliveryFavListAdapter.notifyDataSetChanged();

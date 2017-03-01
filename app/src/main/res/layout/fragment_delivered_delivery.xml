@@ -15,19 +15,7 @@
             android:layout_gravity="center_horizontal"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Delivered"/>
-
-            <ListView
-                android:id="@+id/lv_current"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-
-            </ListView>
+            <include layout="@layout/item_delivered_delivery" />
         </LinearLayout>
     </android.support.design.widget.CoordinatorLayout>
 </android.support.v4.widget.SwipeRefreshLayout>

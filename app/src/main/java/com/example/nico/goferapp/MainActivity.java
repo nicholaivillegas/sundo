@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.example.nico.goferapp.Adapter.ViewPagerAdapter;
 import com.example.nico.goferapp.Fragment.CurrentFragment;
@@ -49,7 +50,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-
         BikeDeliveryTabButton.setTabGravity(TabLayout.GRAVITY_FILL);
         BikeDeliveryTabButton.addTab(BikeDeliveryTabButton.newTab().setText("CURRENT"));
         BikeDeliveryTabButton.addTab(BikeDeliveryTabButton.newTab().setText("DELIVERED"));
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity
         viewPager.setAdapter(viewPagerAdapter);
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(BikeDeliveryTabButton));
-        BikeDeliveryTabButton.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        BikeDeliveryTabButton.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
@@ -112,7 +112,9 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_notification) {
+            Toast.makeText(this, "This is a notification page", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, OverviewBikeDeliveryActivity.class));
             return true;
         }
 
@@ -125,13 +127,9 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_tagcash) {
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_share) {
 

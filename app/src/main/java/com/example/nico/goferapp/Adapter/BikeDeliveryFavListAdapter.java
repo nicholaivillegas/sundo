@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class BikeDeliveryFavListAdapter extends ArrayAdapter<BikeDeliveryFavMode
         this.favorites = favorites;
     }
 
+    @NonNull
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
@@ -61,6 +63,7 @@ public class BikeDeliveryFavListAdapter extends ArrayAdapter<BikeDeliveryFavMode
                             public void onClick(DialogInterface dialog, int whichButton) {
                                 BikeDeliveryFavModel bikeDeliveryFavModel = BikeDeliveryFavModel.findById(BikeDeliveryFavModel.class, itemId);
                                 bikeDeliveryFavModel.delete();
+                                favorites.remove(position);
                                 refresh();
                             }
                         })
@@ -87,7 +90,7 @@ public class BikeDeliveryFavListAdapter extends ArrayAdapter<BikeDeliveryFavMode
         }
     }
 
-    public void refresh() {
+    private void refresh() {
         notifyDataSetChanged();
     }
 }

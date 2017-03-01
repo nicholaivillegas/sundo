@@ -4,7 +4,7 @@
     <color name="colorPrimary">#FF9800 </color>
     <color name="colorPrimaryDark">#F57C00</color>
     <color name="colorAccent">#1a1756 </color>
-    <color name="colorLightPrimary">#FFCDD2</color>
+    <color name="colorLightPrimary">#fff6e5</color>
     <color name="colorIcons">#FFFFFF</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="tabsScrollColor">#1b0402</color>
