@@ -1,4 +1,4 @@
-package com.example.nico.goferapp.Model;
+package com.sundo.user.sundo.Model;
 
 import com.orm.SugarRecord;
 

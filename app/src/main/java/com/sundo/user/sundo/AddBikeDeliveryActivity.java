@@ -1,4 +1,4 @@
-package com.example.nico.goferapp;
+package com.sundo.user.sundo;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -17,12 +17,12 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.nico.goferapp.Adapter.BikeDeliveryFavListAdapter;
-import com.example.nico.goferapp.Adapter.ViewPagerAdapter;
-import com.example.nico.goferapp.Fragment.FromFragment;
-import com.example.nico.goferapp.Fragment.NotesFragment;
-import com.example.nico.goferapp.Fragment.ToFragment;
-import com.example.nico.goferapp.Model.BikeDeliveryFavModel;
+import com.sundo.user.sundo.Adapter.BikeDeliveryFavListAdapter;
+import com.sundo.user.sundo.Adapter.ViewPagerAdapter;
+import com.sundo.user.sundo.Fragment.FromFragment;
+import com.sundo.user.sundo.Fragment.NotesFragment;
+import com.sundo.user.sundo.Fragment.ToFragment;
+import com.sundo.user.sundo.Model.BikeDeliveryFavModel;
 import com.orm.SugarContext;
 
 import java.util.List;

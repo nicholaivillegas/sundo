@@ -1,4 +1,4 @@
-package com.example.nico.goferapp;
+package com.sundo.user.sundo;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,9 +16,9 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.nico.goferapp.Adapter.ViewPagerAdapter;
-import com.example.nico.goferapp.Fragment.CurrentFragment;
-import com.example.nico.goferapp.Fragment.DeliveredFragment;
+import com.sundo.user.sundo.Adapter.ViewPagerAdapter;
+import com.sundo.user.sundo.Fragment.CurrentFragment;
+import com.sundo.user.sundo.Fragment.DeliveredFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;

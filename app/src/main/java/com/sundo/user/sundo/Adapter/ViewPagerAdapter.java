@@ -1,4 +1,4 @@
-package com.example.nico.goferapp.Adapter;
+package com.sundo.user.sundo.Adapter;
 
 /**
  * Created by Nico on 9/26/2016.

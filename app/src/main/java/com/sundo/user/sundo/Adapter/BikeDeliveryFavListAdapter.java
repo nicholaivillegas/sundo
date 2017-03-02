@@ -1,4 +1,4 @@
-package com.example.nico.goferapp.Adapter;
+package com.sundo.user.sundo.Adapter;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -12,8 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.nico.goferapp.Model.BikeDeliveryFavModel;
-import com.example.nico.goferapp.R;
+import com.sundo.user.sundo.Model.BikeDeliveryFavModel;
+import com.sundo.user.sundo.R;
 
 import java.util.List;
 

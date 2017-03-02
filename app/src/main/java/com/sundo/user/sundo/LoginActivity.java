@@ -1,4 +1,4 @@
-package com.example.nico.goferapp;
+package com.sundo.user.sundo;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.nico.goferapp;
+package com.sundo.user.sundo;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
