@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import com.sundo.admin.sundo_admin.Adapter.ViewPagerAdapter;
 import com.sundo.admin.sundo_admin.Fragment.CurrentFragment;
-import com.sundo.admin.sundo_admin.Fragment.DeliveredFragment;
+import com.sundo.admin.sundo_admin.Fragment.HistoryFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity
         setSupportActionBar(toolbar);
         BikeDeliveryTabButton.setTabGravity(TabLayout.GRAVITY_FILL);
         BikeDeliveryTabButton.addTab(BikeDeliveryTabButton.newTab().setText("CURRENT"));
-        BikeDeliveryTabButton.addTab(BikeDeliveryTabButton.newTab().setText("DELIVERED"));
+        BikeDeliveryTabButton.addTab(BikeDeliveryTabButton.newTab().setText("HISTORY"));
 
         viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPagerAdapter.addFragment(new CurrentFragment(), "CURRENT");
-        viewPagerAdapter.addFragment(new DeliveredFragment(), "CURRENT");
+        viewPagerAdapter.addFragment(new HistoryFragment(), "HISTORY");
         viewPagerAdapter.notifyDataSetChanged();
         viewPager.setAdapter(viewPagerAdapter);
 
@@ -124,12 +124,16 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_tagcash) {
-
+            startActivity(new Intent(this, MapsActivity.class));
         } else if (id == R.id.nav_settings) {
 
         } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+            Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+            sharingIntent.setType("text/plain");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Share this App");
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Share this app to your friends!");
+            startActivity(Intent.createChooser(sharingIntent, "Share via"));
+        } else if (id == R.id.nav_logout) {
 
         }
 
